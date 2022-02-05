@@ -1,0 +1,3 @@
+hover actions to add clickables
+make popup appear more smooth with animations
+disapproved data

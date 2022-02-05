@@ -1,0 +1,76 @@
+.container {
+  width: 55vw;
+  box-sizing: border-box;
+  padding-right: 20px;
+  position: relative;
+}
+
+.heading {
+  margin: 0%;
+  padding: 10px 0px;
+  color: indianred;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.wishListDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.wishListContainer {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0%;
+  box-shadow: 2px 2px 5px black;
+  position: relative;
+}
+
+.wishList {
+  margin: 0%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.wishListChoose {
+  background-color: rgb(41, 170, 41);
+  height: 100%;
+  margin: 0%;
+  padding: 10px 20px;
+  border-radius: 50% 0 0 50%;
+  color: white;
+}
+
+.wishListChoose:hover {
+  cursor: pointer;
+}
+
+.wishListCancel {
+  background-color: indianred;
+  height: 100%;
+  margin: 0%;
+  padding: 10px 20px;
+  border-radius: 0% 50% 50% 0%;
+  color: white;
+}
+
+.wishListCancel:hover {
+  cursor: pointer;
+}
+
+.discount {
+  position: absolute;
+  top: -20px;
+  color: green;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
