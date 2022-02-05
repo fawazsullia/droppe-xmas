@@ -11,8 +11,11 @@ import Confirm from "../components/Confirm";
 import Loader from "../components/Loader";
 
 const Home: NextPage = () => {
+
+  //names of childrem, random
   const names: string[] = ["James", "Jill", "Mark", "Anne", "Heather"];
 
+  //states
   const [cart, setcart] = useState<ICart[]>([]);
   const [kidslist, setkidslist] = useState<IKid[]>([]);
   const [selectedKid, setselectedKid] = useState<IKid>({
@@ -22,14 +25,14 @@ const Home: NextPage = () => {
   const [loading, setloading] = useState<boolean>(true);
   const [approvedProds, setapprovedProds] = useState<IApprovedProd[]>([]);
   const [rejectedProds, setrejectedProds] = useState<IApprovedProd[]>([]);
-
   const [viewPopup, setviewPopup] = useState<boolean>(false);
-  const [total, settotal] = useState<{ cost: number, discount: number }>({
+  const [total, settotal] = useState<{ cost: number; discount: number }>({
     cost: 0,
     discount: 0,
   });
   const [count, setcount] = useState<number>(0);
 
+  //when the app loads
   useEffect(() => {
     setloading(true);
     fetch("https://fakestoreapi.com/carts?limit=5")
@@ -57,12 +60,12 @@ const Home: NextPage = () => {
   }, []);
 
   //function to filter the kid list
-  const selectKid = (arg: IKid) => {
+  function selectKid (arg: IKid){
     setselectedKid(arg);
   };
 
-  //add to approved products
-  const addApproved = (product: IProduct, selectedKid: IKid) => {
+  //add to approved products list
+   function addApproved (product: IProduct, selectedKid: IKid){
     let appProd = approvedProds.filter((prod) => prod.product.id == product.id);
     let excludeProd = approvedProds.filter(
       (prod) => prod.product.id != product.id
@@ -71,7 +74,6 @@ const Home: NextPage = () => {
       (prod) => prod.product.id == product.id
     );
 
-    //change here to cover edge cases
     if (inRejected.length > 0) {
       if (inRejected[0].count == 1) {
         if (inRejected[0].kids[0] === selectedKid.id) {
@@ -86,8 +88,6 @@ const Home: NextPage = () => {
           inRejected[0].count = inRejected[0].count - 1;
           setrejectedProds([...rejectedProds, inRejected[0]]);
         }
-
-       
       }
     }
 
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
     }
   };
 
-  //add to rejected
+  //add to rejectedprods list
   function addRejected(product: IProduct, selectedKid: IKid) {
     let rejProd = rejectedProds.filter((prod) => prod.product.id == product.id);
     let excludeProd = rejectedProds.filter(
@@ -125,17 +125,15 @@ const Home: NextPage = () => {
           );
         }
       } else {
-        if (inApproved[0].kids.includes(selectedKid.id)){
+        if (inApproved[0].kids.includes(selectedKid.id)) {
           let index = inApproved[0].kids.indexOf(selectedKid.id);
           inApproved[0].kids.splice(index, 1);
           inApproved[0].count = inApproved[0].count - 1;
           setrejectedProds([...rejectedProds, inApproved[0]]);
         }
-        
       }
     }
 
-    //adding the rejected project
     if (rejProd.length > 0) {
       let count = rejProd[0].count - 1;
       setrejectedProds([
@@ -149,7 +147,6 @@ const Home: NextPage = () => {
       ]);
     }
   }
-
 
   // console.log({ rej: rejectedProds });
   // console.log({ app: approvedProds });

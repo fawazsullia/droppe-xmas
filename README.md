@@ -7,10 +7,10 @@ Site is live on : [Site Link](https://droppe-xmas-ektmku4x0-fawazsullia.vercel.a
 ### To run site in your machine:
 
 - Make sure you have node js installed in your machine
-- Clone the repository with ``` git clone https://github.com/fawazsullia/droppe-xmas ```
+- Clone the repository with `git clone https://github.com/fawazsullia/droppe-xmas`
 - cd into the repository
-- Run ``` npm install ``` to install all dependencies
-- Use ``` npm run dev ``` to run the development server
+- Run `npm install` to install all dependencies
+- Use `npm run dev` to run the development server
 
 ### Features
 
@@ -24,6 +24,15 @@ Site is live on : [Site Link](https://droppe-xmas-ektmku4x0-fawazsullia.vercel.a
 - Ensures you have evaluated all the items before moving to confirm page
 - Displays each kid, their approved and rejected wish list. You can always go back and change your preferences
 - On confirm, redirects to a confirm page.
+
+### Tech Stack
+
+This app is created with Create-Next-App. I have used typescript as the language. The styling was done with pure css without using any libraries.
+I have not used any state management libraries as they seemed unnecessary.
+
+### Third party
+
+[Loader io](https://loading.io/css/) for loading widget
 
 Ps: I have not focused on making the design top notch or on proper commit messages.
 
