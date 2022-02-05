@@ -24,7 +24,7 @@ const Home: NextPage = () => {
   const [rejectedProds, setrejectedProds] = useState<IApprovedProd[]>([]);
 
   const [viewPopup, setviewPopup] = useState<boolean>(false);
-  const [total, settotal] = useState<{ cost: number; discount: number }>({
+  const [total, settotal] = useState<{ cost: number, discount: number }>({
     cost: 0,
     discount: 0,
   });

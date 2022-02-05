@@ -50,7 +50,7 @@ export interface ICart {
   export interface ICartProps {
       approvedProds : IApprovedProd[],
       setviewPopup : (a : boolean)=> void,
-      settotal : (obj : {cost : number, discount : number} | undefined) => void
+      settotal : (obj : {cost : number, discount : number} ) => void
       rejectedProds : IApprovedProd[]
       cart : ICart[]
       count : number
