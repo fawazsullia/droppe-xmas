@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Droppe-Xmas
 
-## Getting Started
+This project is part of coding test for Droppe.
 
-First, run the development server:
+Site is live on : [Site Link](https://droppe-xmas-ektmku4x0-fawazsullia.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### To run site in your machine:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Make sure you have node js installed in your machine
+- Clone the repository with ``` git clone https://github.com/fawazsullia/droppe-xmas ```
+- cd into the repository
+- Run ``` npm install ``` to install all dependencies
+- Use ``` npm run dev ``` to run the development server
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Features
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Fetches cart from fake store api
+- Filters wishlist depending on the kid you select
+- Buttons to approve and reject items from the wishlist
+- Rejected items can be approved and approved items can be rejected
+- Suggests best picks and discounts based on your initial pick inorder to maximise savings
+- Shows you what items you approved, their count in real time
+- Displays total cost and savings in real time
+- Ensures you have evaluated all the items before moving to confirm page
+- Displays each kid, their approved and rejected wish list. You can always go back and change your preferences
+- On confirm, redirects to a confirm page.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Ps: I have not focused on making the design top notch or on proper commit messages.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thanks for reading!
