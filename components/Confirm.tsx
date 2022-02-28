@@ -20,6 +20,7 @@ function Confirm({
   >([]);
 
   useEffect(() => {
+    //set loading spinner here
     setfinalCarts(returnDetails());
   }, []);
 
@@ -51,6 +52,11 @@ function Confirm({
   function returnDetails() {
     let reqArr = [];
 
+    //can use forEach here
+    // this is a very slow algorithm
+    // but a one time process
+    // not really a problem unless the data set is huge
+    
     for (let i: number = 0; i < cart.length; i++) {
       let prod = {
         kidName: cart[i].kidName,

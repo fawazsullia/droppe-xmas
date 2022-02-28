@@ -1,3 +1,5 @@
+//Should I memoize this only to rerender when approved prods and cart changes? which is always
+
 import React from "react";
 import { ICartProps } from "../types";
 import styles from "./styles/Cart.module.css";
@@ -20,6 +22,7 @@ const Cart = ({
 
     let cartCount = 0;
 
+    //can use arr.reduce here
     cart.forEach((c) => {
       cartCount = cartCount + c.products.length;
     });

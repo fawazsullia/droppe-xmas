@@ -11,6 +11,7 @@ const WishList = ({
   addRejected,
   setcount,
 }: IWishListProps) => {
+
   const [wishList, setwishList] = useState<IProduct[]>();
   const [fetching, setfetching] = useState<boolean>(true);
   const [marked, setmarked] = useState<{ kidId: number; prodId: number }[]>([]);
@@ -38,9 +39,13 @@ const WishList = ({
       });
   }, [selectedKid]);
 
+  
+//this will trigger an unnecessary rerender. Either batch this with approved, rejected updates
+//or use an alternate method
+
   useEffect(() => {
     setcount(marked.length + rejectMarked.length);
-  });
+  }, [marked, rejectMarked]);
 
   //handling approval of gifts when clicked on check mark
   const handleApprove = (e: any) => {

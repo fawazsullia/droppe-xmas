@@ -75,7 +75,7 @@ const Home: NextPage = () => {
     );
 
     if (inRejected.length > 0) {
-      if (inRejected[0].count == 1) {
+      if (inRejected[0].count === 1) {
         if (inRejected[0].kids[0] === selectedKid.id) {
           setrejectedProds(
             rejectedProds.filter((p) => p.product.id != product.id)
@@ -135,6 +135,7 @@ const Home: NextPage = () => {
     }
 
     if (rejProd.length > 0) {
+      // count = rejProd[0].count + 1 ; didnt notice because count isn't important for rejected prods
       let count = rejProd[0].count - 1;
       setrejectedProds([
         { product, count, kids: [...rejProd[0].kids, selectedKid.id] },

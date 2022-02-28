@@ -1,3 +1,5 @@
+//just takes the list of kids, function to manipulate parent state and sets the current selected kid
+
 import React from "react";
 import { IKidFilterProps } from "../types";
 import styles from "./styles/KidFilter.module.css";

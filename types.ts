@@ -1,3 +1,5 @@
+//cart state interface
+
 export interface ICart {
   kidName: string;
   id: number;
@@ -16,16 +18,23 @@ export interface IProduct {
   rating: object;
 }
 
+
+//kid interface
 export interface IKid {
   id: number;
   name: string;
 }
 
+
+//approved product state interface
 export interface IApprovedProd {
   product: IProduct;
   count: number;
   kids: number[];
 }
+
+
+//* Props interfaces
 
 export interface IKidFilterProps {
   kids: IKid[];

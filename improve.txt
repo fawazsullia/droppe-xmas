@@ -1,0 +1,23 @@
+index.tsx
+
+line 53 : instead of setloading false, show a component that says " failed to load data, please refresh "
+line 139 : should be + count, not - count
+
+don't need to have a state called count. Can simply calculate using the count 
+in approved and rejected prods
+
+
+--------------------------------------------------
+
+WishList.tsx
+
+//alternate datastructure for scale, I dont have to run a for loop on the whole marked array. And 
+don't need to filter when checking if something is marked
+Marked : {
+    [kidId] : [productsMarked]
+}
+
+Same for reject Marked
+
+
+
